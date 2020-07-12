@@ -41,8 +41,13 @@ namespace WeenieFab
         public static DataTable attribute2DataTable = new DataTable();
         public static DataTable skillsDataTable = new DataTable();
         public static DataTable createListDataTable = new DataTable();
+        public static DataTable iidDataTable = new DataTable();
+        public static DataTable bookInfoDataTable = new DataTable();
+        public static DataTable bookPagesDataTable = new DataTable();
+        public static DataTable generatorDataTable = new DataTable();
+        public static DataTable positionDataTable = new DataTable();
 
-        
+
 
         public MainWindow()
         {
@@ -266,6 +271,47 @@ namespace WeenieFab
             createListDataTable.Columns.Add(tryToBondCreateList);
             createListDataTable.Columns.Add(descriptionCreateList);
             dgCreateItems.DataContext = createListDataTable;
+
+
+            // Instance IDs
+
+
+            // Book Properties
+            DataColumn maxPages = new DataColumn("MaxPages");
+            DataColumn maxCharsPage = new DataColumn("MaxCharsPage");
+
+            maxPages.DataType = Type.GetType("System.Int32");
+            maxCharsPage.DataType = Type.GetType("System.Int32");
+
+            bookInfoDataTable.Columns.Add(maxPages);
+            bookInfoDataTable.Columns.Add(maxCharsPage);
+
+
+            // Book Pages
+            DataColumn pageIdBook = new DataColumn("PageID");
+            DataColumn authorIdBook = new DataColumn("AuthorID");
+            DataColumn authorNameBook = new DataColumn("AuthorName");
+            DataColumn authorAccountBook = new DataColumn("AuthorAccount");
+            DataColumn ignoreAuthorBook = new DataColumn("IgnoreAuthor");
+            DataColumn pageTextBook = new DataColumn("PageText");
+
+            pageIdBook.DataType = Type.GetType("System.Int32");
+            authorIdBook.DataType = Type.GetType("System.Int32");
+            ignoreAuthorBook.DataType = Type.GetType("System.Boolean");
+
+            bookPagesDataTable.Columns.Add(pageIdBook);
+            bookPagesDataTable.Columns.Add(authorIdBook);
+            bookPagesDataTable.Columns.Add(authorNameBook);
+            bookPagesDataTable.Columns.Add(authorAccountBook);
+            bookPagesDataTable.Columns.Add(ignoreAuthorBook);
+            bookPagesDataTable.Columns.Add(pageTextBook);
+
+            // Generator
+
+
+            // Positions
+
+
         }
 
         public void CreateComboBoxLists()
