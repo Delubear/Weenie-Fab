@@ -1653,7 +1653,7 @@
                                             <ContentPresenter x:Name="ContentSite" ContentSource="Header" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="2,2,2,2" RecognizesAccessKey="True"/>
                                         </Border>
                                         <!-- Bottom of Tab-->
-                                        <Rectangle Height="5" Width="80" Margin="0,0,0,0" Stroke="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" StrokeThickness="0" Fill="#FFE4F0F7"/>
+                                        <Rectangle Height="5" Width="78" Margin="0,0,0,0" Stroke="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" StrokeThickness="0" Fill="#FFE4F0F7"/>
                                     </Grid>
                                     <ControlTemplate.Triggers>
                                         <!-- Selected Tab-->
@@ -2016,6 +2016,31 @@
                         </RichTextBox>
                     </Grid>
                 </TabItem>
+
+                <TabItem Header="Instance ID">
+                    <Grid Background="#FFE1E8F5">
+                        
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Book">
+                    <Grid Background="#FFE1E8F5">
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Generator">
+                    <Grid Background="#FFE1E8F5">
+
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Positions">
+                    <Grid Background="#FFE1E8F5">
+
+                    </Grid>
+                </TabItem>
+
+
             </TabControl>
         </Grid>
         <Label x:Name="lblVersion" Content="Version: 0.0.0.0" HorizontalAlignment="Right" Margin="0,1,10,0" VerticalAlignment="Top" FontWeight="Bold"/>
